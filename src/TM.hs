@@ -11,12 +11,15 @@ where
 
 -- | 向き：次に見る方向
 data D = R | L  -- R: 右へ、L: 左へ
+  deriving (Eq, Show)
 
 -- | テープ上の記号
 data S = B | I | O  -- B: 空白、I: 入力1、O: 出力1（例）
+  deriving (Eq, Show)
 
 -- | 状態
 data Q = M | H  -- M: 計算中、H: 停止
+  deriving (Eq, Show)
 
 -- | 遷移関数: ((現在状態, 現在記号), (次状態, 書き込む記号, 向き))
 type Delta = [((Q, S), (Q, S, D))]

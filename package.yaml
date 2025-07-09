@@ -57,3 +57,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - tiny-ml-compiler
+    - hspec
+    - QuickCheck
